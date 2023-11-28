@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.hamburger-checkbox {
+    display: none;
+  }
+  
+  .hamburger-label {
+    cursor: pointer;
+    display: none; /* Initially hide on larger screens */
+  }
+  
+  /* Hamburger menu styles */
+  @media screen and (max-width: 414px) {
+    .hamburger-checkbox:checked + .nav_container nav {
+      display: flex;
+    }
+    
+    .nav_container nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: #333;
+      top: 60px;
+      left: 0;
+    }
+  
+    .hamburger-label {
+      display: block; /* Show on smaller screens */
+    }
+  }
+  
+  /* For screens between 415px and 768px */
+  @media screen and (min-width: 415px) and (max-width: 768px) {
+    .hamburger-checkbox:checked + .nav_container nav {
+      display: flex;
+    }
+    
+    .nav_container nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: #333;
+      top: 60px;
+      left: 0;
+    }
+  
+    .hamburger-label {
+      display: block; /* Show on smaller screens */
+    }
+  }
